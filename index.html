@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name of chosen challenge</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-  <h2>make some magic here!!</h2>
+  <main>
+    <article>
+      <div>
+        <label for="sign">Redact with :</label>
+        <input type="text" id ="sign">
+      </div>
+      <br/>
 
-  <input type="textarea" id="main-texts"/>
-  
-  <input type="text" id="redact-texts"/>
+      <div>
+        <label for="message">Message :</label>
+        <textarea id="main-texts"></textarea>
+        <button id="copy-btn">Copy</button>
+      </div>
+       <br/>
 
-  <button id = "redact-btn">Redact</button>
+      <div>
+        <label for="change">Change :</label>
+        <input type="text" id="redact-texts" /><br/>
+      </div>
+      <br/>
+
+      <div>
+        <button id="return-btn">Return</button>
   
-  
+        <button id="redact-btn">Redact Now</button>
+
+        <button id="clear-btn">Clear</button>
+      </div>
+    </article>
+    <br/>
+    <aside>
+      <div>
+        <span id="scanned">0 word(s) scanned</span>
+      </div>
+      <div>
+        <span id="matched">0 word(s) matched</span>
+      </div>
+      <div>
+        <span id="Scrambled">0 character(s) scrambled</span>
+      </div>
+      <div>
+        <span id="timed">Scrambled in 0 sec(s) </span>
+      </div>
+    </aside>
+  </main>
+
 
   <!-- // ============= EEND DO NOT EDIT ============== // -->
   <script src="index.mjs" type="module"></script>
   <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
+
 </html>
