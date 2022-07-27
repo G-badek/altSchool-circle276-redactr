@@ -13,44 +13,41 @@
 <body>
   
   <main>
+    <h2>Redactr</h2>
     
     <article>
 
-      <div>
+      <div class="inputBox">
         <label for="message">Content </label>
-        <div><textarea id="main-texts"></textarea></div>
-        <button id="copy-btn">Copy</button>
-        <button id="share-btn">Share</button>
-
-      </div>
-       <br/>
-
-      <div>
-        <label for="change">Word(s) to scramble</label>
-        <div><input type="text" id="redact-texts" autocomplete="off"/><br/></div>
-      </div>
-      <br/>
-
-      <div>
-        <label for="sign">Replacement</label>
         <div>
-          <input type="text" id ="sign" autocomplete="off">
+          <textarea class="input textarea" id="main-texts" style="resize: none; overflow: hidden;" spellcheck="false"></textarea>
         </div>
+        <button id="copy-btn" class="btn">Copy</button>
+        <button id="share-btn" class="btn">Share</button>
+
       </div>
-      <br/>
+
+      <div class="inputBox">
+        <label for="change">Word(s) to scramble</label>
+          <input class="input" type="text" id="redact-texts" autocomplete="off"/>
+      </div>
+
+      <div class="inputBox">
+        <label for="sign">Replacement</label>
+          <input class="input" type="text" id ="sign" autocomplete="off">
+      </div>
       
 
-      <div>
-        <button id="return-btn">Return</button>
+      <div class="inputBox">
+        <button id="return-btn" class="btn">Return</button>
   
-        <button id="redact-btn">Redact Now</button>
+        <button id="redact-btn" class="btn">Redact Now</button>
 
-        <button id="clear-btn">Clear</button>
+        <button id="clear-btn" class="btn">Clear</button>
       </div>
 
     </article>
     
-    <br/>
     
     <aside>
       

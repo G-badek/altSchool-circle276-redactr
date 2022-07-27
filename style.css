@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,500&display=swap');
+
+
+:root {
+  --mustard: #E3B448;
+  --sage: #CBD18F;
+  --forestGreen: #3A6B35;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--forestGreen);
+  font-size: 62.5%;
+  padding: 3rem;
+}
+
+main {
+  position: relative;
+  width: 50rem;
+  font-size: 1rem;
+  padding: 4rem;
+  background: var(--forestGreen);
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.1),                    0.5rem 0.5rem 1.5rem rgba(0, 50, 0, 0.3);
+}
+
+main h2 {
+  color: #d7d7d7;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+  font-size: 2.3rem;
+}
+
+main article {
+  text-align: left;
+  margin-top: 4rem;
+}
+
+main article .inputBox {
+  margin-top: 2rem;
+}
+
+main article .inputBox label {
+  display: block;
+  color: #d5d5d5;
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+main article .inputBox .input {
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  border: none;
+  border-radius: .8rem;
+  padding: .5rem 1rem;
+  background: var(--forestGreen);
+  color: var(--mustard);
+  font-size: 1.1rem;
+  box-shadow: inset -0.2rem -0.2rem .6rem rgba(255, 255, 255, 0.2), inset 0.2rem 0.2rem 1rem rgba(0, 40, 0, 0.5);
+
+}
+
+main article .inputBox .textarea {
+  padding: .6rem 1rem;
+  height: 6rem;
+}
