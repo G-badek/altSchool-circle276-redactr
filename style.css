@@ -36,7 +36,7 @@ main {
 }
 
 main h2 {
-  color: #d7d7d7;
+  color: var(--sage);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.4rem;
@@ -54,7 +54,7 @@ main article .inputBox {
 
 main article .inputBox label {
   display: block;
-  color: #d5d5d5;
+  color: var(--sage);
   margin-bottom: .5rem;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -78,4 +78,39 @@ main article .inputBox .input {
 main article .inputBox .textarea {
   padding: .6rem 1rem;
   height: 6rem;
+}
+
+.copyShare {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#redact-btn {
+  padding: 1rem 2rem;
+  font-size: .9rem;
+}
+
+.btn {
+  margin: .5rem;
+  padding: .5rem 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .5s;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: .8rem;
+  color: var(--mustard);
+  background: var(--forestGreen);
+  box-shadow: -0.2rem -0.2rem .4rem rgba(255, 255, 255, 0.1),                  0.2rem 0.2rem 1rem rgba(0, 50, 0, 0.3);
+}
+
+.btn:active {
+  box-shadow: -0.05rem -0.05rem .2rem rgba(255, 255, 255, 0.1), 0.05rem 0.05rem .6rem rgba(0, 50, 0, 0.3);
+
 }
