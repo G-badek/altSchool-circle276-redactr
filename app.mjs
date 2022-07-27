@@ -48,6 +48,10 @@ function startApp() {
       returnText = mainTexts.value.split(" ");
     }
 
+    if ((main.length == 1) && (main[0] == '')) {
+      return;
+    }
+
     let [scan, match, scramble] = redacting(main, redact);
     setTimeout(() => {
       mainTexts.value = main.join(" ");
@@ -88,6 +92,8 @@ function startApp() {
     mainTexts.setSelectionRange(0, 99999);
     copyBtn.innerText = "Copied";
 
+    copyBtn.classList.toggle("pinned");
+
     navigator.clipboard.writeText(mainTexts.value).then(function() {
       console.log('Async: Copying to clipboard was successful!');
     }, function(err) {
@@ -96,6 +102,8 @@ function startApp() {
 
     setTimeout(() => {
       copyBtn.innerText = "Copy";
+      copyBtn.classList.toggle("pinned");
+      
     }, 3000);
     setTimeout(() => {
       dont = true;
@@ -172,7 +180,7 @@ function startApp() {
         }
       }
     }
-    return ([scanned, matched, scrambled])
+    return ([scanned, matched, scrambled]);
   }
 
   //RETURN FUNCTION
