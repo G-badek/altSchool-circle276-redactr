@@ -11,26 +11,34 @@
 </head>
 
 <body>
+  
   <main>
+    
     <article>
-      <div>
-        <label for="sign">Redact with :</label>
-        <input type="text" id ="sign">
-      </div>
-      <br/>
 
       <div>
-        <label for="message">Message :</label>
-        <textarea id="main-texts"></textarea>
+        <label for="message">Content </label>
+        <div><textarea id="main-texts"></textarea></div>
         <button id="copy-btn">Copy</button>
+        <button id="share-btn">Share</button>
+
       </div>
        <br/>
 
       <div>
-        <label for="change">Change :</label>
-        <input type="text" id="redact-texts" /><br/>
+        <label for="change">Word(s) to scramble</label>
+        <div><input type="text" id="redact-texts" autocomplete="off"/><br/></div>
       </div>
       <br/>
+
+      <div>
+        <label for="sign">Replacement</label>
+        <div>
+          <input type="text" id ="sign" autocomplete="off">
+        </div>
+      </div>
+      <br/>
+      
 
       <div>
         <button id="return-btn">Return</button>
@@ -39,22 +47,29 @@
 
         <button id="clear-btn">Clear</button>
       </div>
+
     </article>
+    
     <br/>
+    
     <aside>
+      
+      <h3>Stats</h3>
       <div>
-        <span id="scanned">0 word(s) scanned</span>
+        <span id="scanned">Scanned word(s) : 0</span>
       </div>
       <div>
-        <span id="matched">0 word(s) matched</span>
+        <span id="matched">Matched word(s) : 0</span>
       </div>
       <div>
-        <span id="Scrambled">0 character(s) scrambled</span>
+        <span id="scrambled">Scrambled character(s) : 0</span>
       </div>
       <div>
-        <span id="timed">Scrambled in 0 sec(s) </span>
+        <span id="timed">Execution time : 0</span>
       </div>
+      
     </aside>
+    
   </main>
 
 
