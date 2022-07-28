@@ -23,6 +23,9 @@ function startApp() {
   const matched = document.querySelector('#matched');
   const scrambled = document.querySelector('#scrambled');
   const timed = document.querySelector('#timed');
+  const questNavButton = document.querySelector('.quest');
+  const closeNav = document.querySelector('.close');
+  const nav = document.querySelector("nav");
 
   let main, redact, returnText, dont, redactStatus;
 
@@ -33,6 +36,19 @@ function startApp() {
 
   // EVENT LISTENER
   /////////////////////////////////////////////
+
+  // OUESTION AND CLOSE MARK BUTTON
+
+  questNavButton.addEventListener("click", () => {
+    nav.classList.toggle("hide");
+    closeNav.classList.toggle("show");
+  });
+
+  closeNav.addEventListener("click", () => {
+    nav.classList.toggle("hide");
+    closeNav.classList.toggle("show");
+  });
+  
 
   //REDACT BUTT0N
 

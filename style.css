@@ -177,7 +177,7 @@ aside h3 {
 
 .statRec {
   margin: 1rem;
-  width: 25rem;
+  width: 30rem;
 }
 
 .statRec > div {
@@ -223,14 +223,65 @@ label > span {
   right: 0;
 }
 
+/* HEADER */
+
+header {
+  width:100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 1rem 3rem;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.close {
+  visibility: hidden;
+  z-index: 2000;
+/*   display: none; */
+}
 
 
 
+/* NAVIGATION */
 
+nav {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--sage);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden;
+}
 
+nav a {
+  color: var(--forestGreen);
+  text-decoration: none;
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+}
 
+.hide {
+  opacity: 1;
+  visibility: visible;
+}
 
-
+.show {
+  visibility: visible;
+}
 
 
 

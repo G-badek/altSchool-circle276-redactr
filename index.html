@@ -5,21 +5,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Name of chosen challenge</title>
+  <title>Redactr</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
+  <header>
+    <button class="close btn">X</button>  
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+
   <main>
     <h2>Redactr</h2>
     <article>
       <button class="quest btn">&quest;</button>
+
       <div class="inputBox">
         <label for="message">Content </label>
         <div>
-          <textarea class="input textarea" id="main-texts" style="resize: none; overflow: hidden;" spellcheck="false" placeholder="Input your content here"></textarea>
+          <textarea class="input textarea" id="main-texts" style="resize: none; overflow: hidden;" spellcheck="false"
+            placeholder="Input your content here"></textarea>
         </div>
         <div class="copyShare">
           <div><button id="copy-btn" class="btn">Copy</button></div>
@@ -29,58 +41,59 @@
 
       <div class="inputBox">
         <label for="change">Words to scramble</label>
-          <input class="input" type="text" id="redact-texts" autocomplete="off" placeholder="Input words to scramble"/>
+        <input class="input" type="text" id="redact-texts" autocomplete="off" placeholder="Input words to scramble" />
       </div>
 
       <div class="inputBox">
         <label for="sign">Replacement <span>(optional)</span></label>
-          <input class="input" type="text" id ="sign" autocomplete="off" placeholder="*">
+        <input class="input" type="text" id="sign" autocomplete="off" placeholder="*">
       </div>
-      
+
 
       <div class="inputBox btns">
         <button id="return-btn" class="btn">Return</button>
-  
+
         <button id="redact-btn" class="btn">Redact Now</button>
 
         <button id="clear-btn" class="btn">Clear</button>
       </div>
 
     </article>
-    
-    
+
+
     <aside>
-      
+
       <h3>Stats</h3>
       <div class="statRec">
-        
+
         <div>
           <span class="statName">Scanned word(s) : </span><span class="statVal"><span id="scanned">0</span></span>
         </div>
-        
+
         <div>
-          <span class="statName">Matched word(s) : </span><span class="statVal"><span  id="matched">0</span></span>
+          <span class="statName">Matched word(s) : </span><span class="statVal"><span id="matched">0</span></span>
         </div>
-        
+
         <div>
-          <span  class="statName">Scrambled character(s) :</span><span class="statVal" ><span id="scrambled">0</span></span>
+          <span class="statName">Scrambled character(s) :</span><span class="statVal"><span
+              id="scrambled">0</span></span>
         </div>
-        
+
         <div>
           <span class="statName">Execution time : </span>
           <span class="statVal timed">
-            <span id="timed">0</span> 
+            <span id="timed">0</span>
             <span>ms</span>
           </span>
         </div>
-        
+
       </div>
-      
+
     </aside>
     <footer>
       <p>Copyright &copy; 2022 Badefort</p>
     </footer>
-    
+
   </main>
 
 
