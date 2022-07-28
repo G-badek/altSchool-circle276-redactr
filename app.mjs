@@ -103,7 +103,7 @@ function startApp() {
       copyBtn.innerText = "Copy";
       copyBtn.classList.toggle("pinned");
       
-    }, 3000);
+    }, 2000);
     setTimeout(() => {
       dont = true;
       mainTexts.blur();

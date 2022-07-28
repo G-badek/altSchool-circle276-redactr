@@ -53,6 +53,7 @@ main article {
   text-align: left;
   margin: 2rem;
   width: 35rem;
+  position: relative;
 }
 
 main article .inputBox {
@@ -73,7 +74,7 @@ main article .inputBox .input {
   height: 3rem;
   outline: none;
   border: none;
-  border-radius: .8rem;
+  border-radius: .5rem;
   padding: .5rem 1rem;
   background: var(--forestGreen);
   color: var(--mustard);
@@ -112,9 +113,10 @@ main article .inputBox .textarea {
   border: none;
   outline: none;
   cursor: pointer;
-  transition: all .5s;
+  transition: all .2s;
   font-size: 0.75rem;
   font-weight: 600;
+/*   position: relative; */
   text-transform: uppercase;
   border-radius: .8rem;  
   -webkit-tap-highlight-color: transparent;
@@ -123,11 +125,17 @@ main article .inputBox .textarea {
   box-shadow: -0.2rem -0.2rem .4rem rgba(255, 255, 255, 0.1),                  0.2rem 0.2rem 1rem rgba(10, 50, 10, 0.3);
 }
 
-.btn:active, btn:focus, .pinned {
+.btn:hover {
+  transform: translateY(-.2rem);
+}
+
+.btn:active, .pinned {
   box-shadow: -0.05rem -0.05rem .2rem rgba(255, 255, 255, 0.1), 0.05rem 0.05rem .6rem rgba(10, 50, 10, 0.3);
   border: none;
   outline: none;
-  transform: scale(0.95);
+  transform: translateY(0rem);
+/*   position: abosolute;
+  animation: btn .2s; */
 }
 
 .pinned {
@@ -162,7 +170,7 @@ aside h3 {
   letter-spacing: 0.3rem;
   font-size: 1.5rem;
   display: block;
-  border-bottom: .3rem double var(--sage);
+  border-bottom: .2rem double var(--sage);
   width: 25rem;
   padding: .7rem;
 }
@@ -205,4 +213,440 @@ footer {
 
 label > span {
   font-size: .8rem;
+}
+
+.quest {
+  margin: 0;
+  font-size: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+}
+
+/* MOBILE DEVICES */
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 0;
+    font-size: 60%;
+  }
+
+  main {
+    max-width: 50rem;
+    font-size: 1rem;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  main article {
+    margin: .5rem;
+    width: 20rem;
+
+  }
+  
+  main article .inputBox label {
+    display: block;
+    color: var(--sage);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  } 
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    
+  }
+
+  .btn {
+    transition: all .1s;
+    padding: .4rem;
+    white-space: nowrap;
+    font-size: .7rem;
+    font-weight: 400;
+      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
+  }
+
+  .btn:hover {
+    transform: translate(0);
+  }
+
+  .btn:active, .pinned {
+    transform: scale(.98) translate(0);
+  }
+
+  .quest {
+    padding: .3rem .8rem;
+    font-size: 1rem;
+  }
+
+  .quest:active {
+    transform: scale(.98) translate(0);
+  }
+
+  main article .inputBox .input::placeholder {
+    font-size: 1rem;
+  }
+
+  aside h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: .1rem double var(--sage);
+    width: 15rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    margin: .5rem;
+    width: 21rem;
+    font-size: .9rem;
+  }
+
+  #redact-btn {
+    padding: .5rem 1rem;
+    font-size: .9rem;
+  }
+
+  #return-btn {
+    padding: 0 .7rem;
+  }
+
+  #clear-btn {
+    padding: 0rem .7rem;
+  }
+   
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+    body {
+    padding: 0;
+  }
+
+  main {
+    max-width: 50rem;
+    font-size: 1rem;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  main article {
+    margin: .5rem;
+    width: 20rem;
+
+  }
+  
+  main article .inputBox label {
+    display: block;
+    color: var(--sage);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  } 
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    
+  }
+
+  .btn {
+    transition: all .1s;
+    padding: .4rem;
+    white-space: nowrap;
+    font-size: .7rem;
+    font-weight: 400;
+      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
+  }
+
+  .btn:hover {
+    transform: translate(0);
+  }
+
+  .btn:active, .pinned {
+    transform: scale(.98) translate(0);
+  }
+
+  .quest {
+    padding: .3rem .8rem;
+    font-size: 1rem;
+  }
+
+  .quest:active {
+    transform: scale(.98) translate(0);
+  }
+
+  main article .inputBox .input::placeholder {
+    font-size: 1rem;
+  }
+
+  aside h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: .1rem double var(--sage);
+    width: 15rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    margin: .5rem;
+    width: 22rem;
+    font-size: .9rem;
+  }
+  
+}
+
+/* SMALL SCREEN LAPTOPS */
+
+@media (max-width: 1024px) {
+    body {
+    padding: 0;
+    font-size: 60%;
+  }
+
+  main {
+    max-width: 50rem;
+    font-size: 1rem;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  main article {
+    margin: .5rem;
+    width: 20rem;
+
+  }
+  
+  main article .inputBox label {
+    display: block;
+    color: var(--sage);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  } 
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    
+  }
+
+  .btn {
+    transition: all .1s;
+    padding: .4rem;
+    white-space: nowrap;
+    font-size: .7rem;
+    font-weight: 400;
+      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
+  }
+
+  .btn:hover {
+    transform: translate(0);
+  }
+
+  .btn:active, .pinned {
+    transform: scale(.98) translate(0);
+  }
+
+  .quest {
+    padding: .3rem .8rem;
+    font-size: 1rem;
+  }
+
+  .quest:active {
+    transform: scale(.98) translate(0);
+  }
+
+  main article .inputBox .input::placeholder {
+    font-size: 1rem;
+  }
+
+  aside h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: .1rem double var(--sage);
+    width: 15rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    margin: .5rem;
+    width: 22rem;
+    font-size: .9rem;
+  }
+  
+}
+
+/* DESKTOPS */
+
+@media (max-width: 1200px) {
+    body {
+    padding: 0;
+    font-size: 60%;
+  }
+
+  main {
+    max-width: 50rem;
+    font-size: 1rem;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  main article {
+    margin: .5rem;
+    width: 20rem;
+
+  }
+  
+  main article .inputBox label {
+    display: block;
+    color: var(--sage);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  } 
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    
+  }
+
+  .btn {
+    transition: all .1s;
+    padding: .4rem;
+    white-space: nowrap;
+    font-size: .7rem;
+    font-weight: 400;
+      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
+  }
+
+  .btn:hover {
+    transform: translate(0);
+  }
+
+  .btn:active, .pinned {
+    transform: scale(.98) translate(0);
+  }
+
+  .quest {
+    padding: .3rem .8rem;
+    font-size: 1rem;
+  }
+
+  .quest:active {
+    transform: scale(.98) translate(0);
+  }
+
+  main article .inputBox .input::placeholder {
+    font-size: 1rem;
+  }
+
+  aside h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: .1rem double var(--sage);
+    width: 15rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    margin: .5rem;
+    width: 22rem;
+    font-size: .9rem;
+  }
+  
+}
+
+/* EXTRA LARGE */
+
+@media (min-width: 1201px) {
+    body {
+    padding: 0;
+    font-size: 60%;
+  }
+
+  main {
+    max-width: 50rem;
+    font-size: 1rem;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  main article {
+    margin: .5rem;
+    width: 20rem;
+
+  }
+  
+  main article .inputBox label {
+    display: block;
+    color: var(--sage);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  } 
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    
+  }
+
+  .btn {
+    transition: all .1s;
+    padding: .4rem;
+    white-space: nowrap;
+    font-size: .7rem;
+    font-weight: 400;
+      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
+  }
+
+  .btn:hover {
+    transform: translate(0);
+  }
+
+  .btn:active, .pinned {
+    transform: scale(.98) translate(0);
+  }
+
+  .quest {
+    padding: .3rem .8rem;
+    font-size: 1rem;
+  }
+
+  .quest:active {
+    transform: scale(.98) translate(0);
+  }
+
+  main article .inputBox .input::placeholder {
+    font-size: 1rem;
+  }
+
+  aside h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: .1rem double var(--sage);
+    width: 15rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    margin: .5rem;
+    width: 22rem;
+    font-size: .9rem;
+  }
+  
 }
