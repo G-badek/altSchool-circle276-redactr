@@ -223,6 +223,88 @@ label > span {
   right: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== MEDIA QUERIES ======= */
+
+
+
+/* EXTRA LARGE */
+
+@media (min-width: 1201px) {
+
+  
+}
+
+/* DESKTOPS */
+
+@media (max-width: 1200px) {
+
+  
+}
+
+/* SMALL SCREEN LAPTOPS */
+
+@media (max-width: 1024px) {
+
+  
+}
+
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  main {
+    width: 100vw;
+    font-size: 1rem;
+    padding: 2rem 0;
+    overflow-x: hidden;
+    border-radius: 0;
+  }
+
+  main article {
+    width: 30rem;
+  }
+
+  #redact-btn {
+    padding: 1rem 2rem;
+    font-size: .9rem;
+  }
+
+  #return-btn, #clear-btn {
+    padding: 0 1.8rem;
+  }
+
+  aside h3 {
+    border-bottom: .1rem double var(--sage);
+    width: 25rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    width: 25rem;
+  } 
+  
+}
+
 /* MOBILE DEVICES */
 
 @media (max-width: 480px) {
@@ -235,13 +317,13 @@ label > span {
   main {
     max-width: 50rem;
     font-size: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     overflow-x: hidden;
   }
 
   main article {
     margin: .5rem;
-    width: 20rem;
+    width: 19rem;
 
   }
   
@@ -310,343 +392,8 @@ label > span {
     font-size: .9rem;
   }
 
-  #return-btn {
+  #return-btn, #clear-btn {
     padding: 0 .7rem;
   }
 
-  #clear-btn {
-    padding: 0rem .7rem;
-  }
-   
-}
-
-/* TABLETS */
-
-@media (max-width: 768px) {
-    body {
-    padding: 0;
-  }
-
-  main {
-    max-width: 50rem;
-    font-size: 1rem;
-    padding: 2rem;
-    overflow-x: hidden;
-  }
-
-  main article {
-    margin: .5rem;
-    width: 20rem;
-
-  }
-  
-  main article .inputBox label {
-    display: block;
-    color: var(--sage);
-    margin-bottom: .5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-  } 
-
-  .btns {
-    display: flex;
-    justify-content: space-between;
-    height: 4rem;
-    
-  }
-
-  .btn {
-    transition: all .1s;
-    padding: .4rem;
-    white-space: nowrap;
-    font-size: .7rem;
-    font-weight: 400;
-      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
-  }
-
-  .btn:hover {
-    transform: translate(0);
-  }
-
-  .btn:active, .pinned {
-    transform: scale(.98) translate(0);
-  }
-
-  .quest {
-    padding: .3rem .8rem;
-    font-size: 1rem;
-  }
-
-  .quest:active {
-    transform: scale(.98) translate(0);
-  }
-
-  main article .inputBox .input::placeholder {
-    font-size: 1rem;
-  }
-
-  aside h3 {
-    font-weight: 600;
-    font-size: 1.4rem;
-    border-bottom: .1rem double var(--sage);
-    width: 15rem;
-    padding: .5rem;
-  }
-
-  .statRec {
-    margin: .5rem;
-    width: 22rem;
-    font-size: .9rem;
-  }
-  
-}
-
-/* SMALL SCREEN LAPTOPS */
-
-@media (max-width: 1024px) {
-    body {
-    padding: 0;
-    font-size: 60%;
-  }
-
-  main {
-    max-width: 50rem;
-    font-size: 1rem;
-    padding: 2rem;
-    overflow-x: hidden;
-  }
-
-  main article {
-    margin: .5rem;
-    width: 20rem;
-
-  }
-  
-  main article .inputBox label {
-    display: block;
-    color: var(--sage);
-    margin-bottom: .5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-  } 
-
-  .btns {
-    display: flex;
-    justify-content: space-between;
-    height: 4rem;
-    
-  }
-
-  .btn {
-    transition: all .1s;
-    padding: .4rem;
-    white-space: nowrap;
-    font-size: .7rem;
-    font-weight: 400;
-      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
-  }
-
-  .btn:hover {
-    transform: translate(0);
-  }
-
-  .btn:active, .pinned {
-    transform: scale(.98) translate(0);
-  }
-
-  .quest {
-    padding: .3rem .8rem;
-    font-size: 1rem;
-  }
-
-  .quest:active {
-    transform: scale(.98) translate(0);
-  }
-
-  main article .inputBox .input::placeholder {
-    font-size: 1rem;
-  }
-
-  aside h3 {
-    font-weight: 600;
-    font-size: 1.4rem;
-    border-bottom: .1rem double var(--sage);
-    width: 15rem;
-    padding: .5rem;
-  }
-
-  .statRec {
-    margin: .5rem;
-    width: 22rem;
-    font-size: .9rem;
-  }
-  
-}
-
-/* DESKTOPS */
-
-@media (max-width: 1200px) {
-    body {
-    padding: 0;
-    font-size: 60%;
-  }
-
-  main {
-    max-width: 50rem;
-    font-size: 1rem;
-    padding: 2rem;
-    overflow-x: hidden;
-  }
-
-  main article {
-    margin: .5rem;
-    width: 20rem;
-
-  }
-  
-  main article .inputBox label {
-    display: block;
-    color: var(--sage);
-    margin-bottom: .5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-  } 
-
-  .btns {
-    display: flex;
-    justify-content: space-between;
-    height: 4rem;
-    
-  }
-
-  .btn {
-    transition: all .1s;
-    padding: .4rem;
-    white-space: nowrap;
-    font-size: .7rem;
-    font-weight: 400;
-      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
-  }
-
-  .btn:hover {
-    transform: translate(0);
-  }
-
-  .btn:active, .pinned {
-    transform: scale(.98) translate(0);
-  }
-
-  .quest {
-    padding: .3rem .8rem;
-    font-size: 1rem;
-  }
-
-  .quest:active {
-    transform: scale(.98) translate(0);
-  }
-
-  main article .inputBox .input::placeholder {
-    font-size: 1rem;
-  }
-
-  aside h3 {
-    font-weight: 600;
-    font-size: 1.4rem;
-    border-bottom: .1rem double var(--sage);
-    width: 15rem;
-    padding: .5rem;
-  }
-
-  .statRec {
-    margin: .5rem;
-    width: 22rem;
-    font-size: .9rem;
-  }
-  
-}
-
-/* EXTRA LARGE */
-
-@media (min-width: 1201px) {
-    body {
-    padding: 0;
-    font-size: 60%;
-  }
-
-  main {
-    max-width: 50rem;
-    font-size: 1rem;
-    padding: 2rem;
-    overflow-x: hidden;
-  }
-
-  main article {
-    margin: .5rem;
-    width: 20rem;
-
-  }
-  
-  main article .inputBox label {
-    display: block;
-    color: var(--sage);
-    margin-bottom: .5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 500;
-  } 
-
-  .btns {
-    display: flex;
-    justify-content: space-between;
-    height: 4rem;
-    
-  }
-
-  .btn {
-    transition: all .1s;
-    padding: .4rem;
-    white-space: nowrap;
-    font-size: .7rem;
-    font-weight: 400;
-      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
-  }
-
-  .btn:hover {
-    transform: translate(0);
-  }
-
-  .btn:active, .pinned {
-    transform: scale(.98) translate(0);
-  }
-
-  .quest {
-    padding: .3rem .8rem;
-    font-size: 1rem;
-  }
-
-  .quest:active {
-    transform: scale(.98) translate(0);
-  }
-
-  main article .inputBox .input::placeholder {
-    font-size: 1rem;
-  }
-
-  aside h3 {
-    font-weight: 600;
-    font-size: 1.4rem;
-    border-bottom: .1rem double var(--sage);
-    width: 15rem;
-    padding: .5rem;
-  }
-
-  .statRec {
-    margin: .5rem;
-    width: 22rem;
-    font-size: .9rem;
-  }
-  
 }
