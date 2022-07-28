@@ -22,13 +22,18 @@ body {
   background: var(--forestGreen);
   font-size: 62.5%;
   padding: 3rem;
+  overflow-x: hidden;
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
-  width: 40rem;
+  max-width: 50rem;
   font-size: 1rem;
-  padding: 4rem;
+  padding: 3rem;
   background: var(--forestGreen);
   text-align: center;
   border-radius: 1rem;
@@ -41,11 +46,13 @@ main h2 {
   font-weight: 700;
   letter-spacing: 0.4rem;
   font-size: 2.3rem;
+  margin: 1rem;
 }
 
 main article {
   text-align: left;
-  margin-top: 4rem;
+  margin: 2rem;
+  width: 35rem;
 }
 
 main article .inputBox {
@@ -133,7 +140,7 @@ main article .inputBox .textarea {
   color: var(--forestGreen);
 }
 
-#sign::placeholder {
+main article .inputBox .input::placeholder {
   color: var(--mustard);
   opacity: 50%;
 }
@@ -141,7 +148,7 @@ main article .inputBox .textarea {
 /* STATS */
 
 aside {
-  margin: 2rem 1rem;
+  margin: 2rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,14 +159,50 @@ aside h3 {
   color: var(--sage);
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.3rem;
   font-size: 1.5rem;
   display: block;
   border-bottom: .3rem double var(--sage);
-  width: 20rem;
+  width: 25rem;
   padding: .7rem;
 }
 
 .statRec {
-  margin: 2rem;
+  margin: 1rem;
+  width: 25rem;
+}
+
+.statRec > div {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statRec div > span {
+  display: inline-block;
+  padding: 0rem 1rem;
+  color: var(--sage);
+}
+
+.statVal {
+  display: inline-block;
+  width: 5rem;
+  padding: 15rem;
+  position: relative;
+}
+
+.timed {
+  position: relative;
+  top: 0;
+  left: .8rem;
+}
+
+footer {
+  color: var(--mustard);
+  font-size: .8rem;
+}
+
+label > span {
+  font-size: .8rem;
 }

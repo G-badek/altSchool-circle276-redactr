@@ -56,7 +56,7 @@ function startApp() {
 
       mainTexts.value = main.join(" ");
       const endTime = Date.now();
-      let timeCompleted = `${endTime - startTime}ms`;
+      let timeCompleted = `${endTime - startTime}`;
       stats(scan, match, scramble, timeCompleted);
   });
 
@@ -77,10 +77,10 @@ function startApp() {
     redactTexts.value = "";
     returnText = "";
     sign.value = "";
-    scanned.innerText = `Scanned word(s) : ${0}`;
-    matched.innerText = `Matched word(s) : ${0}`;
-    scrambled.innerText = `Scrambled character(s) : ${0}`;
-    timed.innerText = `Execution time : ${0}`;
+    scanned.innerText = `${0}`;
+    matched.innerText = `${0}`;
+    scrambled.innerText = `${0}`;
+    timed.innerText = `${0}`;
   });
 
   //COPY BUTTON
@@ -186,19 +186,19 @@ function startApp() {
 
   const returnTexts = (texts) => {
     mainTexts.value = texts.join(" ");
-    scanned.innerText = `Scanned word(s) : ${0}`;
-    matched.innerText = `Matched word(s) : ${0}`;
-    timed.innerText = `Execution time : ${0}`;
-    scrambled.innerText = `Scrambled character(s) : ${0}`;
+    scanned.innerText = `${0}`;
+    matched.innerText = `${0}`;
+    timed.innerText = `${0}`;
+    scrambled.innerText = `${0}`;
   }
 
   //STATS FUNCTION
 
   const stats = (scan, match, scramble, timeCompleted) => {
-    scanned.innerText = `Scanned word(s) : ${scan}`;
-    matched.innerText = `Matched word(s) : ${match}`;
-    scrambled.innerText = `Scrambled character(s) : ${scramble}`;
-    timed.innerText = `Execution time : ${timeCompleted}`;
+    scanned.innerText = `${scan}`;
+    matched.innerText = `${match}`;
+    scrambled.innerText = `${scramble}`;
+    timed.innerText = `${timeCompleted}`;
   }
 
   /////////////////////////////////////////////

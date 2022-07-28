@@ -14,13 +14,12 @@
   
   <main>
     <h2>Redactr</h2>
-    
     <article>
-
+      <p>&quest;</p>
       <div class="inputBox">
         <label for="message">Content </label>
         <div>
-          <textarea class="input textarea" id="main-texts" style="resize: none; overflow: hidden;" spellcheck="false"></textarea>
+          <textarea class="input textarea" id="main-texts" style="resize: none; overflow: hidden;" spellcheck="false" placeholder="Input your content here"></textarea>
         </div>
         <div class="copyShare">
           <div><button id="copy-btn" class="btn">Copy</button></div>
@@ -29,12 +28,12 @@
       </div>
 
       <div class="inputBox">
-        <label for="change">Word(s) to scramble</label>
-          <input class="input" type="text" id="redact-texts" autocomplete="off"/>
+        <label for="change">Words to scramble</label>
+          <input class="input" type="text" id="redact-texts" autocomplete="off" placeholder="Input words to scramble"/>
       </div>
 
       <div class="inputBox">
-        <label for="sign">Replacement</label>
+        <label for="sign">Replacement <span>(optional)</span></label>
           <input class="input" type="text" id ="sign" autocomplete="off" placeholder="*">
       </div>
       
@@ -54,21 +53,33 @@
       
       <h3>Stats</h3>
       <div class="statRec">
+        
         <div>
-          <span id="scanned">Scanned word(s) : 0</span>
+          <span class="statName">Scanned word(s) : </span><span class="statVal"><span id="scanned">0</span></span>
         </div>
+        
         <div>
-          <span id="matched">Matched word(s) : 0</span>
+          <span class="statName">Matched word(s) : </span><span class="statVal"><span  id="matched">0</span></span>
         </div>
+        
         <div>
-          <span id="scrambled">Scrambled character(s) : 0</span>
+          <span  class="statName">Scrambled character(s) :</span><span class="statVal" ><span id="scrambled">0</span></span>
         </div>
+        
         <div>
-          <span id="timed">Execution time : 0</span>
+          <span class="statName">Execution time : </span>
+          <span class="statVal timed">
+            <span id="timed">0</span> 
+            <span>ms</span>
+          </span>
         </div>
+        
       </div>
       
     </aside>
+    <footer>
+      <p>Copyright &copy; 2022 Badefort</p>
+    </footer>
     
   </main>
 
