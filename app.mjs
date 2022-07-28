@@ -24,7 +24,7 @@ function startApp() {
   const scrambled = document.querySelector('#scrambled');
   const timed = document.querySelector('#timed');
 
-  let main, redact, returnText, dont;
+  let main, redact, returnText, dont, redactStatus;
 
 
   /////////////////////////////////////////////
@@ -53,12 +53,11 @@ function startApp() {
     }
 
     let [scan, match, scramble] = redacting(main, redact);
-    setTimeout(() => {
+
       mainTexts.value = main.join(" ");
       const endTime = Date.now();
       let timeCompleted = `${endTime - startTime}ms`;
       stats(scan, match, scramble, timeCompleted);
-    }, 10);
   });
 
   //RETURN BUTTON
@@ -108,7 +107,7 @@ function startApp() {
     setTimeout(() => {
       dont = true;
       mainTexts.blur();
-    }, 500);
+    }, 1000);
 
   });
 

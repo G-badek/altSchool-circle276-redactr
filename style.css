@@ -109,15 +109,18 @@ main article .inputBox .textarea {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  border-radius: .8rem;
+  border-radius: .8rem;  
+  -webkit-tap-highlight-color: transparent;
   color: var(--mustard);
   background: var(--forestGreen);
   box-shadow: -0.2rem -0.2rem .4rem rgba(255, 255, 255, 0.1),                  0.2rem 0.2rem 1rem rgba(10, 50, 10, 0.3);
 }
 
-.btn:active, .pinned {
+.btn:active, btn:focus, .pinned {
   box-shadow: -0.05rem -0.05rem .2rem rgba(255, 255, 255, 0.1), 0.05rem 0.05rem .6rem rgba(10, 50, 10, 0.3);
-
+  border: none;
+  outline: none;
+  transform: scale(0.95);
 }
 
 .pinned {
@@ -130,3 +133,33 @@ main article .inputBox .textarea {
   color: var(--forestGreen);
 }
 
+#sign::placeholder {
+  color: var(--mustard);
+  opacity: 50%;
+}
+
+/* STATS */
+
+aside {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+aside h3 {
+  color: var(--sage);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+  font-size: 1.5rem;
+  display: block;
+  border-bottom: .3rem double var(--sage);
+  width: 20rem;
+  padding: .7rem;
+}
+
+.statRec {
+  margin: 2rem;
+}
