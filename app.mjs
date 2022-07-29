@@ -26,6 +26,7 @@ function startApp() {
   const questNavButton = document.querySelector('.quest');
   const closeNav = document.querySelector('.close');
   const nav = document.querySelector("nav");
+  const mainPage = document.querySelector("main");
 
   let main, redact, returnText, dont, redactStatus;
 
@@ -41,12 +42,15 @@ function startApp() {
 
   questNavButton.addEventListener("click", () => {
     nav.classList.toggle("hide");
-    closeNav.classList.toggle("show");
+    closeNav.classList.toggle("hide");
+    mainPage.classList.toggle("show");
   });
 
   closeNav.addEventListener("click", () => {
     nav.classList.toggle("hide");
-    closeNav.classList.toggle("show");
+    closeNav.classList.toggle("hide");
+    mainPage.classList.toggle("show");
+    
   });
   
 

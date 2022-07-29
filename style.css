@@ -31,7 +31,7 @@ main {
   align-items: center;
   flex-direction: column;
   position: relative;
-  max-width: 50rem;
+  max-width: 55rem;
   font-size: 1rem;
   padding: 3rem;
   background: var(--forestGreen);
@@ -230,7 +230,7 @@ header {
   display: flex;
   justify-content: right;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   color: white;
   position: absolute;
   top: 0;
@@ -240,6 +240,10 @@ header {
 .close {
   visibility: hidden;
   z-index: 2000;
+  position: fixed;
+  top: 2rem;
+  padding: .8rem 1.1rem !important;
+  border-radius: 50%;
 /*   display: none; */
 }
 
@@ -249,38 +253,59 @@ header {
 
 nav {
   width: 100%;
-  height: 100vh;
   background-color: var(--sage);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
   transition: all .3s;
-  opacity: 0;
+  padding: 3rem;
+  opacity: 0; 
   visibility: hidden;
+  height: 0;
 }
 
 nav a {
   color: var(--forestGreen);
   text-decoration: none;
-  font-size: 2rem;
-  margin-bottom: 3.2rem;
-  text-transform: uppercase;
-  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-transform: none;
+  font-weight: 400;
   position: relative;
+  max-width: 50rem;
+  text-align: left;
+  cursor: default;
+}
+
+nav h3 {
+  color: var(--forestGreen);
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
 .hide {
   opacity: 1;
   visibility: visible;
+  height: auto;
 }
 
 .show {
-  visibility: visible;
+  visibility: hidden;
+  height: 0;
 }
 
 
@@ -360,16 +385,28 @@ nav a {
 
 @media (max-width: 480px) {
 
+  html {
+    padding: 0;
+    margin: 0;
+  }
+
   body {
     padding: 0;
+    margin: 0;
     font-size: 60%;
+  }
+
+  nav {
+    padding: 2rem;
   }
 
   main {
     max-width: 50rem;
     font-size: 1rem;
     padding: 1rem;
-    overflow-x: hidden;
+    overflow: hidden;
+    margin: 0; 
+    
   }
 
   main article {
